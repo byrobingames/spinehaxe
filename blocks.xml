@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette>
+    
+    <block tag="spinehaxe-newspine"
+        spec="Create new %0 Spine with Asset name %1 and scale to %2 for %3 [c:spine]"
+        code="~ = new Spine(~,~,~);"
+        help="Create an new Spine Object. Create an new Anything Attribute for the Spine and enter the asset name of the spine, name should be the same as the files(Atlas,json,skel,png). Put the files in the extras folder. Scale the spine between 0 and 3"
+        type="action"
+        color="red"
+        returns="void">
+        <fields>
+            <anything order="0"/>
+            <text order="1"/>
+            <number order="2"/>
+            <actor order="3"/>
+        </fields>
+    </block>
+    
+    <block tag="spinehaxe-setMixByName"
+        spec="Set Animation Mix fromName: %1 toName: %2 with duration: %3 for Spine: %0 [c:spine]"
+        code="~.stateData.setMixByName(~,~,~);"
+        help="Sets the Animation mix from animation name, to animation name, with duration, for the created Spine attribute (If from animation ends go to animation over time) "
+        type="action"
+        color="green"
+        returns="void">
+        <fields>
+            <text order="1"/>
+            <text order="2"/>
+            <number order="3"/>
+            <anything order="0"/>
+        </fields>
+    </block>
+    
+    <block tag="spinehaxe-setAnimationByName"
+        spec="Set Animation in Tracknr: %1 with name %2, %3 repeat for Spine: %0 [c:spine]"
+        code="~.state.setAnimationByName(~,~,~);"
+        help="Set/switch the animation in tracknr with name, with or without repeat(loop), for the created Spine attribute."
+        type="action"
+        color="green"
+        returns="void">
+        <fields>
+            <number order="1"/>
+            <text order="2"/>
+            <dropdown order="3">
+                <choices>
+                    <c text="without" code="false"/>
+                    <c text="with" code="true"/>
+                </choices>
+            </dropdown>
+            <anything order="0"/>
+        </fields>
+    </block>
+    
+    <block tag="spinehaxe-addAnimationByName"
+        spec="Add Animation in Tracknr: %1 with name %2, %3 repeat with an delay of: %4, for Spine: %0 [c:spine]"
+        code="~.state.addAnimationByName(~,~,~,~);"
+        help="Add Animation in tracknr with name, with or without repeat(loop), with an delay of time, for the created Spine attribute."
+        type="action"
+        color="green"
+        returns="void">
+        <fields>
+            <number order="1"/>
+            <text order="2"/>
+            <dropdown order="3">
+                <choices>
+                    <c text="without" code="false"/>
+                    <c text="with" code="true"/>
+                </choices>
+            </dropdown>
+            <number order="4"/>
+            <anything order="0"/>
+        </fields>
+    </block>
+    
+    <block tag="spinehaxe-cleartrackwithnummer"
+        spec="Clear Tracknummer: %1 for Spine: %0 [c:spine]"
+        code="~.state.clearTrack(~);"
+        help="Clears a specific tracknummer for spine with name."
+        type="action"
+        color="green"
+        returns="void">
+        <fields>
+            <number order="1"/>
+            <anything order="0"/>
+        </fields>
+    </block>
+    
+    <block tag="spinehaxe-cleartrackclearalltracks"
+        spec="Clear all Tracks for Spine: %0 [c:spine]"
+        code="~.state.clearTracks();"
+        help="Clears all tracks for spine with name."
+        type="action"
+        color="green"
+        returns="void">
+        <fields>
+            <number order="1"/>
+            <anything order="0"/>
+        </fields>
+    </block>
+    
+    <block tag="spinehaxe-setattachmentonslot"
+        spec="Set AttachmentName: %2 on slotName: %1 for Spine: %0 [c:spine]"
+        code="~.skeleton.setAttachment(~,~);"
+        help="Clears all tracks for spine with name."
+        type="action"
+        color="green"
+        returns="void">
+        <fields>
+            <text order="1"/>
+            <text order="2"/>
+            <anything order="0"/>
+        </fields>
+    </block>
+    
+    <block tag="spinehaxe-setskin"
+        spec="Set SkinName: %1 for Spine: %0 [c:spine]"
+        code="~.skeleton.set_skinName(~);"
+        help="Set Skin by name."
+        type="action"
+        color="green"
+        returns="void">
+        <fields>
+            <text order="1"/>
+            <anything order="0"/>
+        </fields>
+    </block>
+    <block tag="spinehaxe-getskin"
+        spec="Get SkinName for Spine: %0 [c:spine]"
+        code="~.skeleton.get_skinName()"
+        help="Set Skin by name."
+        type="normal"
+        color="green"
+        returns="text">
+        <fields>
+            <anything order="0"/>
+        </fields>
+    </block>
+    
+    
+    <block tag="spinehaxe-setFlipXY"
+        spec="Set flip on %1 to %2 for Spine: %0 [c:spine]"
+        code="~.skeleton.flip~ = ~;"
+        help="Flip the animation 180 degrees on X or Y if true, if false default look, for the created Spine attribute."
+        type="action"
+        color="green"
+        returns="void">
+        <fields>
+            <dropdown order="1">
+                <choices>
+                    <c text="X" code="X"/>
+                    <c text="Y" code="Y"/>
+                </choices>
+            </dropdown>
+            <dropdown order="2">
+                <choices>
+                    <c text="false" code="false"/>
+                    <c text="true" code="true"/>
+                </choices>
+            </dropdown>
+            <anything order="0"/>
+        </fields>
+    </block>
+    
+    <block tag="spinehaxe-getFlipXY"
+        spec="Spine: %0 is flipped on %1 [c:spine]"
+        code="~.skeleton.flip~"
+        help="Return True if created Spine attribute is flip, on X or Y, if false Spine is nog fliped."
+        type="normal"
+        color="green"
+        returns="boolean">
+        <fields>
+            <anything order="0"/>
+            <dropdown order="1">
+                <choices>
+                    <c text="X" code="X"/>
+                    <c text="Y" code="Y"/>
+                </choices>
+            </dropdown>
+        </fields>
+    </block>
+    
+    <block tag="spinehaxe-setSpeed"
+        spec="Set animation speed to %1, for Spine: %0 [c:spine]"
+        code="~.state.timeScale = ~;"
+        help="Set Animation Speed, for the created Spine attribute."
+        type="action"
+        color="green"
+        returns="void">
+        <fields>
+            <number order="1"/>
+            <anything order="0"/>
+        </fields>
+    </block>
+    
+    <block tag="spinehaxe-getSpeed"
+        spec="get animation speed of Spine: %0 [c:spine]"
+        code="~.state.timeScale"
+        help="Get Animation Speed of the created Spine attribute."
+        type="normal"
+        color="green"
+        returns="number">
+        <fields>
+            <anything order="0"/>
+        </fields>
+    </block>
+    
+    <!-- Cannot set Width/Heigth, must set this in json -->
+    <!--<block tag="spinehaxe-setWidthHeight"
+        spec="Set Animation %1 to %2 , for Spine: %0 [c:spine]"
+        code="~.skeletonData.~ = ~;"
+        help="Set Animation 1: width/height, 2: to number 3: for the created Spine attribute."
+        type="action"
+        color="green"
+        returns="void">
+        <fields>
+            <dropdown order="1">
+                <choices>
+                    <c text="width" code="width"/>
+                    <c text="height" code="height"/>
+                </choices>
+            </dropdown>
+            <number order="2"/>
+            <anything order="0"/>
+        </fields>
+    </block>-->
+    
+    <!--<block tag="spinehaxe-getWidthHeight"
+        spec="%1, of Spine: %0 [c:spine]"
+        code="~.get~()"
+        help="get the 1: width/height (after scale), 2: for the created Spine attribute."
+        type="normal"
+        color="green"
+        returns="number">
+        <fields>
+            <dropdown order="1">
+                <choices>
+                    <c text="width" code="Width"/>
+                    <c text="height" code="Height"/>
+                </choices>
+            </dropdown>
+            <anything order="0"/>
+        </fields>
+    </block>-->
+    
+    <!--<block tag="spinehaxe-destroySelf"
+        spec="Kill Spine: %0 [c:spine]"
+        code="~.destroySelf();"
+        help="Kills 1: the created Spine attribute. It will also kill the Actor it self."
+        type="action"
+        color="green"
+        returns="void">
+        <fields>
+            <anything order="0"/>
+        </fields>
+    </block>-->
+    
+    <block tag="spinehaxe-setRootBoneXY"
+        spec="Set RootBone %1 to %2 for Spine %0 [c:spine]"
+        code="~.set~(~);"
+        help="Set the Spines Root bone on X and Y, See SpineViewer to get the RootBone X,Y for your Spine"
+        type="action"
+        color="green"
+        returns="void">
+        <fields>
+            <dropdown order="1">
+                <choices>
+                    <c text="X" code="X"/>
+                    <c text="Y" code="Y"/>
+                </choices>
+            </dropdown>
+            <number order="2"/>
+            <anything order="0"/>
+        </fields>
+    </block>
+    
+    <!-- Use actor collison shapes for now -->
+    <!--<block tag="spinehaxe-addRectshape"
+        spec="add %5 rectangular collision shape (x: %1 y: %2 w: %3 h: %4) for Spine %0 [c:spine]"
+        code="~.addRectShape(~,~,~,~,~);"
+        help="Set the Spines Root bone on X and Y, See SpineViewer to get the RootBone X,Y for your Spine"
+        type="action"
+        color="green"
+        returns="void">
+        <fields>
+            <dropdown order="5">
+                <choices>
+                    <c text="a sensor" code="true"/>
+                    <c text="a solid" code="false"/>
+                </choices>
+            </dropdown>
+            <number order="1"/>
+            <number order="2"/>
+            <number order="3"/>
+            <number order="4"/>
+            <anything order="0"/>
+        </fields>
+    </block>-->
+    
+    <block tag="spinehaxe-animation" spec="animation" code="trackEntry.animation" type="normal" color="green" returns="anything" hidden="true">
+        <fields/>
+    </block>
+    
+    <block tag="spinehaxe-animation-event" spec="event" code="event.get_data()" type="normal" color="green" returns="anything" hidden="true">
+        <fields/>
+    </block>
+    
+    <block tag="spinehaxe-listeners"
+        spec="when %3 of Spine: %0 %1 [c:spine]"
+        code="~.state.~.add(function(trackEntry){~});"
+        help="Add animation Listeners, use it once in a when Created Event."
+        type="wrapper"
+        color="green"
+        returns="void">
+        <fields>
+            <anything order="0"/>
+            <dropdown order="1">
+                <choices>
+                    <c text="starts" code="onStart"/>
+                    <c text="ends" code="onEnd"/>
+                    <c text="is playing" code="onComplete"/>
+                </choices>
+            </dropdown>
+            <code-block order="2"/>
+            <attached-block order="3" tag="spinehaxe-animation"/>
+        </fields>
+    </block>
+    
+    <block tag="spinehaxe-events"
+        spec="when an %2 %3 starts for Spine: %0 [c:spine]"
+        code="~.state.onEvent.add(function(trackEntry, event){~});"
+        help="Add event Listeners when an animation event starts, use it once in a when Created Event."
+        type="wrapper"
+        color="green"
+        returns="void">
+        <fields>
+            <anything order="0"/>
+            <code-block order="1"/>
+            <attached-block order="2" tag="spinehaxe-animation"/>
+            <attached-block order="3" tag="spinehaxe-animation-event"/>
+        </fields>
+    </block>
+    
+    <block tag="spinehaxe-clearListeners"
+        spec="remove listeners from %0 [c:spine]"
+        code="~.state.clearListeners();"
+        help="remove all added animation/event listeners from spine skeleton"
+        type="action"
+        color="green"
+        returns="void">
+        <fields>
+            <anything order="0"/>
+        </fields>
+    </block>
+    
+</palette>
