@@ -22,6 +22,9 @@ Install the zip file: Go to : http://community.stencyl.com/index.php/topic,30432
 
 [See WIKI page](https://github.com/byrobingames/spinehaxe/wiki/Spinehaxe-wiki-for-Stencyl!)
 
+Download example game here: [https://github.com/byrobingames/spinehaxe/releases](https://github.com/byrobingames/spinehaxe/releases)<br/>
+Download extras folder here: [https://github.com/byrobingames/spinehaxe/releases](https://github.com/byrobingames/spinehaxe/releases)<br/>
+
 **Lessons**
 
 [Lesson 1](https://github.com/byrobingames/spinehaxe/wiki/Lesson-1:-Create-Spine-Skeleton-on-Actor-Type)<br/>
