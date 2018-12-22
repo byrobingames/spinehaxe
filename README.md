@@ -6,6 +6,8 @@ Stencyl extension for “Spine” (http://esotericsoftware.com) for All Platform
 
 @author Big thanks to the work on spine-haxe runtime by bendmorris [https://github.com/bendmorris/spinehaxe](https://github.com/bendmorris/spinehaxe).
 
+![spinhaxe(https://byrobingames.github.io/img/spinehaxe/spineBoy.gif)](https://byrobingames.github.io/img/spinehaxe/spineBoy.gif)
+
 ### Main Features
 
 - Spine Skeleton Support
