@@ -20,6 +20,15 @@ Install the zip file: Go to : http://community.stencyl.com/index.php/topic,30432
 
 ### Documentation and Block Examples
 
+[See WIKI page](https://github.com/byrobingames/spinehaxe/wiki/Spinehaxe-wiki-for-Stencyl!)
+
+**Lessons**
+
+[Lesson 1](https://github.com/byrobingames/spinehaxe/wiki/Lesson-1:-Create-Spine-Skeleton-on-Actor-Type)<br/>
+[Lesson 2](https://github.com/byrobingames/spinehaxe/wiki/Lesson-2:-Center-SpineSkeleton-on-Actor-type)<br/>
+[Lesson 3](https://github.com/byrobingames/spinehaxe/wiki/Lesson-3:-Set-animation-mix)<br/>
+[Lesson 4](https://github.com/byrobingames/spinehaxe/wiki/Lesson-4:-Set-Add-Animation)<br/>
+[Lesson 5](https://github.com/byrobingames/spinehaxe/wiki/Lesson-5:-Flip-Spine-animation-on-x-or-y)
 
 ### Version History
 
